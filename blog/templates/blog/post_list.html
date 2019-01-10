@@ -24,14 +24,13 @@
 
 	<hr/>
 </div>
-<div>
-<center><a href="/"><<h1> My First Post </a></h1></center>
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-        <div>
-        	<center><a href="/"><h1> My Second Post </h1></a></center>
-        	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 <style>
 .first{
 	background-image: url("https://cdn.pixabay.com/photo/2016/11/19/16/48/notebook-1840276__340.jpg");

@@ -8,6 +8,9 @@
 </head>
 <body>
 	<div class= "first">
+		{% if user.is_authenticated %}
+		<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
 	<div class="second"><center><h1 style="font-size:70px"><strong><u>Welcome to Writer's Corner</u></strong></h1></center> </div>
 	<center><div class="date"><h2 style="font-size: 50px"> Pour your heart out </h2></div></center>
 	<br>

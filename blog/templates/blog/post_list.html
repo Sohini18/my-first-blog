@@ -1,43 +1,13 @@
-<html>
-<head>
-	<title> Writer's Corner </title>
-</head>
-<body>
-	<div class= "first">
-	<div class="second"><center><h1 style="font-size:75px"><strong><u>Welcome to Writer's Corner</u></strong></h1></center> </div>
-	<center><h2 style="font-size: 50px"> Pour your heart out </h2></center>
-	<br>
-	<br>
-	<br>
-	<br> 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-<br>
-<br>
-<br>
 
 
-
-	<hr/>
-</div>
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+{% extends 'blog/base.html' %}
+{% block content %}
+	{% for post in posts %}
+    <div class="load">
+        <center><h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2></center>
+        <div class="page"><center><p>published: {{ post.published_date }}</p></center></div>
+        <center><p>{{ post.text|linebreaksbr }}</p></center>
     </div>
 {% endfor %}
-<style>
-.first{
-	background-image: url("https://cdn.pixabay.com/photo/2016/11/19/16/48/notebook-1840276__340.jpg");
-	height: 75%;
-	 background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</body>
-</html>
+{% endblock %}
+

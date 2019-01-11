@@ -1,0 +1,32 @@
+
+.first{
+	background-image: url("https://cdn.pixabay.com/photo/2016/11/19/16/48/notebook-1840276__340.jpg");
+	height: 75%;
+	 background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+  .load {
+      
+      margin-top: 10;
+  }
+
+.page {
+     font-size: 10px;
+     margin-top: 0;
+
+}
+
+h2 a {
+	color:000000;
+	font-size: 70 px;
+	font-family: 'Lobster';
+}
+
+.second {
+font-size: 100pt;
+color: 000000;
+}
+.date {
+	color: 000000;
+}
